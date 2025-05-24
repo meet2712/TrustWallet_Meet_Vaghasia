@@ -1,0 +1,2651 @@
+<?xml version='1.0' encoding='utf-8' ?>
+
+<!-- build 20251.25.0520.1026                               -->
+<workbook original-version='18.1' source-build='2025.1.2 (20251.25.0520.1026)' source-platform='mac' version='18.1' xmlns:user='http://www.tableausoftware.com/xml/user'>
+  <document-format-change-manifest>
+    <AccessibleZoneTabOrder />
+    <AnimationOnByDefault />
+    <AutoCreateAndUpdateDSDPhoneLayouts />
+    <ISO8601PeriodTypes />
+    <IntuitiveSorting />
+    <IntuitiveSorting_SP2 />
+    <MarkAnimation />
+    <ObjectModelEncapsulateLegacy />
+    <ObjectModelExtractV2 />
+    <ObjectModelTableType />
+    <SchemaViewerObjectModel />
+    <SetMembershipControl />
+    <SheetIdentifierTracking />
+    <SortTagCleanup />
+    <_.fcp.VConnDownstreamExtractsWithWarnings.true...VConnDownstreamExtractsWithWarnings />
+    <WindowsPersistSimpleIdentifiers />
+    <ZoneBackgroundTransparency />
+  </document-format-change-manifest>
+  <preferences>
+    <preference name='ui.encoding.shelf.height' value='24' />
+    <preference name='ui.shelf.height' value='26' />
+  </preferences>
+  <datasources>
+    <datasource hasconnection='false' inline='true' name='Parameters' version='18.1'>
+      <aliases enabled='yes' />
+      <column alias='Week' caption='View' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;week&quot;'>
+        <calculation class='tableau' formula='&quot;week&quot;' />
+        <aliases>
+          <alias key='&quot;day&quot;' value='Day' />
+          <alias key='&quot;month&quot;' value='Month' />
+          <alias key='&quot;quarter&quot;' value='Quarter' />
+          <alias key='&quot;week&quot;' value='Week' />
+          <alias key='&quot;year&quot;' value='Year' />
+        </aliases>
+        <members>
+          <member alias='Year' value='&quot;year&quot;' />
+          <member alias='Quarter' value='&quot;quarter&quot;' />
+          <member alias='Month' value='&quot;month&quot;' />
+          <member alias='Week' value='&quot;week&quot;' />
+          <member alias='Day' value='&quot;day&quot;' />
+        </members>
+      </column>
+    </datasource>
+    <datasource caption='cleaned_crypto_transactions' inline='true' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' version='18.1'>
+      <connection class='federated'>
+        <named-connections>
+          <named-connection caption='cleaned_crypto_transactions' name='textscan.0ilu2oo1ajb2ah176trvw1iwdpeh'>
+            <connection class='textclean' cleaning='yes' compat='no' csvFile='/Users/meetvaghasia/Desktop/TrustWallet/cleaned_crypto_transactions.csv' dataRefreshTime='' directory='/Users/meetvaghasia/Desktop/TrustWallet' filename='/var/folders/q0/51vbmq81731830mfyscwhr0w0000gn/T/tableau-temp/1lffs431c19njw1fg7i0t0o91drz/cleaned_crypto_transactions.csv.xlsx' interpretationMode='8' password='' server='' validate='no' />
+          </named-connection>
+        </named-connections>
+        <relation connection='textscan.0ilu2oo1ajb2ah176trvw1iwdpeh' name='cleaned_crypto_transactions.csv' table='[cleaned_crypto_transactio#csv$]' type='table'>
+          <columns character-set='UTF-8' gridOrigin='A1:L10001:no:A1:L10001:1' header='yes' locale='en_IN' separator=','>
+            <column datatype='integer' name='Transaction_ID' ordinal='0' />
+            <column datatype='integer' name='User_ID' ordinal='1' />
+            <column datatype='string' name='Crypto' ordinal='2' />
+            <column datatype='string' name='Transaction_Type' ordinal='3' />
+            <column datatype='real' name='Amount' ordinal='4' />
+            <column datatype='real' name='Price_Per_Unit' ordinal='5' />
+            <column datatype='real' name='Total_Value' ordinal='6' />
+            <column datatype='real' name='Transaction_Fee' ordinal='7' />
+            <column datatype='string' name='Platform' ordinal='8' />
+            <column datatype='string' name='Status' ordinal='9' />
+            <column datatype='string' name='Wallet_Type' ordinal='10' />
+            <column datatype='datetime' name='Transaction_Date' ordinal='11' />
+          </columns>
+        </relation>
+        <metadata-records>
+          <metadata-record class='capability'>
+            <remote-name />
+            <remote-type>0</remote-type>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias />
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='integer' name='context'>0</attribute>
+              <attribute datatype='string' name='gridOrigin'>&quot;A1:L10001:no:A1:L10001:1&quot;</attribute>
+              <attribute datatype='integer' name='lost'>0</attribute>
+              <attribute datatype='integer' name='outcome'>1</attribute>
+              <attribute datatype='integer' name='processed'>70000</attribute>
+            </attributes>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[Transaction_ID]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Transaction_ID</remote-alias>
+            <ordinal>0</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>User_ID</remote-name>
+            <remote-type>20</remote-type>
+            <local-name>[User_ID]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>User_ID</remote-alias>
+            <ordinal>1</ordinal>
+            <local-type>integer</local-type>
+            <aggregation>Sum</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;I8&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Crypto</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Crypto]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Crypto</remote-alias>
+            <ordinal>2</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Transaction_Type]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Transaction_Type</remote-alias>
+            <ordinal>3</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Amount</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Amount]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Amount</remote-alias>
+            <ordinal>4</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Price_Per_Unit</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Price_Per_Unit]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Price_Per_Unit</remote-alias>
+            <ordinal>5</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Total_Value</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Total_Value]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Total_Value</remote-alias>
+            <ordinal>6</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction_Fee</remote-name>
+            <remote-type>5</remote-type>
+            <local-name>[Transaction_Fee]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Transaction_Fee</remote-alias>
+            <ordinal>7</ordinal>
+            <local-type>real</local-type>
+            <aggregation>Sum</aggregation>
+            <precision>15</precision>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;R8&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Platform</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Platform]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Platform</remote-alias>
+            <ordinal>8</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Status</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Status]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Status</remote-alias>
+            <ordinal>9</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Wallet_Type</remote-name>
+            <remote-type>130</remote-type>
+            <local-name>[Wallet_Type]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Wallet_Type</remote-alias>
+            <ordinal>10</ordinal>
+            <local-type>string</local-type>
+            <aggregation>Count</aggregation>
+            <contains-null>true</contains-null>
+            <collation flag='1' name='LEN_RIN_S2' />
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;WSTR&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+          <metadata-record class='column'>
+            <remote-name>Transaction_Date</remote-name>
+            <remote-type>7</remote-type>
+            <local-name>[Transaction_Date]</local-name>
+            <parent-name>[cleaned_crypto_transactions.csv]</parent-name>
+            <remote-alias>Transaction_Date</remote-alias>
+            <ordinal>11</ordinal>
+            <local-type>datetime</local-type>
+            <aggregation>Year</aggregation>
+            <contains-null>true</contains-null>
+            <attributes>
+              <attribute datatype='string' name='DebugRemoteType'>&quot;DATE&quot;</attribute>
+            </attributes>
+            <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+          </metadata-record>
+        </metadata-records>
+      </connection>
+      <aliases enabled='yes' />
+      <column caption='Date_view' datatype='date' name='[Calculation_29836402407907336]' role='dimension' type='quantitative'>
+        <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [Transaction_Date]))' />
+      </column>
+      <column caption='calculated_difference' datatype='real' name='[Calculation_3687462945692688384]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='((ZN(SUM([Total_Value])) - LOOKUP(ZN(SUM([Total_Value])), -1)))'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='fee_per_transaction_perc' datatype='real' name='[Calculation_3687462945761308673]' role='measure' type='quantitative'>
+        <calculation class='tableau' formula='[Transaction_Fee] / [Total_Value]' />
+      </column>
+      <column datatype='string' name='[Platform]' role='dimension' type='nominal' />
+      <column caption='Price Per Unit' datatype='real' name='[Price_Per_Unit]' role='measure' type='quantitative' />
+      <column aggregation='None' datatype='integer' name='[Total Value (bin)]' role='dimension' type='quantitative'>
+        <calculation class='bin' decimals='4' formula='[Total_Value]' peg='0' size='100000' />
+      </column>
+      <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+      <column caption='Color Calc' datatype='string' name='[Transaction Volume Color (copy)_2935643295674871809]' role='measure' type='nominal'>
+        <calculation class='tableau' formula='if [Calculation_3687462945692688384] &lt; 0 then &apos;Negative&apos; else &apos;Positive&apos; end'>
+          <table-calc ordering-type='Rows' />
+        </calculation>
+      </column>
+      <column caption='Transaction Date' datatype='datetime' name='[Transaction_Date]' role='dimension' type='ordinal' />
+      <column caption='Transaction Fee' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Transaction_Fee]' role='measure' type='quantitative' />
+      <column caption='Transaction ID' datatype='integer' name='[Transaction_ID]' role='dimension' type='ordinal' />
+      <column caption='Transaction Type' datatype='string' name='[Transaction_Type]' role='dimension' type='nominal' />
+      <column caption='User ID' datatype='integer' name='[User_ID]' role='dimension' type='ordinal' />
+      <column caption='Wallet Type' datatype='string' name='[Wallet_Type]' role='dimension' type='nominal' />
+      <column caption='cleaned_crypto_transactions.csv' datatype='table' name='[__tableau_internal_object_id__].[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]' role='measure' type='quantitative' />
+      <column-instance column='[Platform]' derivation='None' name='[none:Platform:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Wallet_Type]' derivation='None' name='[none:Wallet_Type:nk]' pivot='key' type='nominal' />
+      <column-instance column='[Transaction Volume Color (copy)_2935643295674871809]' derivation='User' name='[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' pivot='key' type='nominal'>
+        <table-calc ordering-type='Rows' />
+        <table-calc field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[Calculation_3687462945692688384]' ordering-type='Rows' />
+      </column-instance>
+      <extract _.fcp.VConnDownstreamExtractsWithWarnings.true...user-specific='false' count='-1' enabled='true' object-id='' units='records'>
+        <connection access_mode='readonly' authentication='auth-none' author-locale='en_US' class='hyper' dbname='/Users/meetvaghasia/Documents/My Tableau Repository/Datasources/cleaned_crypto_transactions.hyper' default-settings='yes' schema='Extract' sslmode='' tablename='Extract' update-time='05/24/2025 07:30:28 AM' username='tableau_internal_user'>
+          <relation name='Extract' table='[Extract].[Extract]' type='table' />
+          <refresh>
+            <refresh-event add-from-file-path='cleaned_crypto_transactions' increment-value='%null%' refresh-type='create' rows-inserted='10000' timestamp-start='2025-05-24 07:30:28.304' />
+          </refresh>
+          <metadata-records>
+            <metadata-record class='column'>
+              <remote-name>Transaction_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[Transaction_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction_ID</remote-alias>
+              <ordinal>0</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>User_ID</remote-name>
+              <remote-type>20</remote-type>
+              <local-name>[User_ID]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>User_ID</remote-alias>
+              <ordinal>1</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>integer</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>8404</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Crypto</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Crypto]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Crypto</remote-alias>
+              <ordinal>2</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>10</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction_Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Transaction_Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction_Type</remote-alias>
+              <ordinal>3</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Amount</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Amount]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Amount</remote-alias>
+              <ordinal>4</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Price_Per_Unit</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Price_Per_Unit]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Price_Per_Unit</remote-alias>
+              <ordinal>5</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Total_Value</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Total_Value]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Total_Value</remote-alias>
+              <ordinal>6</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction_Fee</remote-name>
+              <remote-type>5</remote-type>
+              <local-name>[Transaction_Fee]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction_Fee</remote-alias>
+              <ordinal>7</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>real</local-type>
+              <aggregation>Sum</aggregation>
+              <approx-count>10000</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Platform</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Platform]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Platform</remote-alias>
+              <ordinal>8</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>7</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Status</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Status]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Status</remote-alias>
+              <ordinal>9</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>3</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Wallet_Type</remote-name>
+              <remote-type>129</remote-type>
+              <local-name>[Wallet_Type]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Wallet_Type</remote-alias>
+              <ordinal>10</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>string</local-type>
+              <aggregation>Count</aggregation>
+              <approx-count>5</approx-count>
+              <contains-null>true</contains-null>
+              <collation flag='1' name='LEN_RIN_S2' />
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+            <metadata-record class='column'>
+              <remote-name>Transaction_Date</remote-name>
+              <remote-type>135</remote-type>
+              <local-name>[Transaction_Date]</local-name>
+              <parent-name>[Extract]</parent-name>
+              <remote-alias>Transaction_Date</remote-alias>
+              <ordinal>11</ordinal>
+              <family>cleaned_crypto_transactions.csv</family>
+              <local-type>datetime</local-type>
+              <aggregation>Year</aggregation>
+              <approx-count>1097</approx-count>
+              <contains-null>true</contains-null>
+              <object-id>[cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E]</object-id>
+            </metadata-record>
+          </metadata-records>
+        </connection>
+      </extract>
+      <layout common-percentage='0.673932' dim-ordering='alphabetic' measure-ordering='alphabetic' parameter-percentage='0.326068' show-structure='true' user-set-layout-v2='true' />
+      <style>
+        <style-rule element='mark'>
+          <encoding attr='color' field='[none:Platform:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Binance&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Kraken&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Huobi&quot;</bucket>
+            </map>
+            <map to='#b07aa1'>
+              <bucket>&quot;OKX&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;FTX&quot;</bucket>
+            </map>
+            <map to='#edc948'>
+              <bucket>&quot;KuCoin&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Coinbase&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[none:Wallet_Type:nk]' type='palette'>
+            <map to='#4e79a7'>
+              <bucket>&quot;Cold Wallet&quot;</bucket>
+            </map>
+            <map to='#59a14f'>
+              <bucket>&quot;Trezor&quot;</bucket>
+            </map>
+            <map to='#76b7b2'>
+              <bucket>&quot;Ledger&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Hot Wallet&quot;</bucket>
+            </map>
+            <map to='#f28e2b'>
+              <bucket>&quot;Exchange Wallet&quot;</bucket>
+            </map>
+          </encoding>
+          <encoding attr='color' field='[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' palette='tableau20_10_0' type='palette'>
+            <map to='#8cd17d'>
+              <bucket>&quot;Positive&quot;</bucket>
+            </map>
+            <map to='#8cd17d'>
+              <bucket>&quot;green&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;Negative&quot;</bucket>
+            </map>
+            <map to='#e15759'>
+              <bucket>&quot;red&quot;</bucket>
+            </map>
+          </encoding>
+        </style-rule>
+      </style>
+      <semantic-values>
+        <semantic-value key='[Country].[Name]' value='&quot;India&quot;' />
+      </semantic-values>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Week' caption='View' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;week&quot;'>
+          <calculation class='tableau' formula='&quot;week&quot;' />
+          <aliases>
+            <alias key='&quot;day&quot;' value='Day' />
+            <alias key='&quot;month&quot;' value='Month' />
+            <alias key='&quot;quarter&quot;' value='Quarter' />
+            <alias key='&quot;week&quot;' value='Week' />
+            <alias key='&quot;year&quot;' value='Year' />
+          </aliases>
+        </column>
+      </datasource-dependencies>
+      <object-graph>
+        <objects>
+          <object caption='cleaned_crypto_transactions.csv' id='cleaned_crypto_transactions.csv_453DEB7692374FFAB0909CAB277ECC1E'>
+            <properties context=''>
+              <relation connection='textscan.0ilu2oo1ajb2ah176trvw1iwdpeh' name='cleaned_crypto_transactions.csv' table='[cleaned_crypto_transactio#csv$]' type='table'>
+                <columns character-set='UTF-8' gridOrigin='A1:L10001:no:A1:L10001:1' header='yes' locale='en_IN' separator=','>
+                  <column datatype='integer' name='Transaction_ID' ordinal='0' />
+                  <column datatype='integer' name='User_ID' ordinal='1' />
+                  <column datatype='string' name='Crypto' ordinal='2' />
+                  <column datatype='string' name='Transaction_Type' ordinal='3' />
+                  <column datatype='real' name='Amount' ordinal='4' />
+                  <column datatype='real' name='Price_Per_Unit' ordinal='5' />
+                  <column datatype='real' name='Total_Value' ordinal='6' />
+                  <column datatype='real' name='Transaction_Fee' ordinal='7' />
+                  <column datatype='string' name='Platform' ordinal='8' />
+                  <column datatype='string' name='Status' ordinal='9' />
+                  <column datatype='string' name='Wallet_Type' ordinal='10' />
+                  <column datatype='datetime' name='Transaction_Date' ordinal='11' />
+                </columns>
+              </relation>
+            </properties>
+            <properties context='extract'>
+              <relation name='Extract' table='[Extract].[Extract]' type='table' />
+            </properties>
+          </object>
+        </objects>
+      </object-graph>
+    </datasource>
+  </datasources>
+  <worksheets>
+    <worksheet name='Average Fee %'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='fee_per_transaction_perc' datatype='real' name='[Calculation_3687462945761308673]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='[Transaction_Fee] / [Total_Value]' />
+            </column>
+            <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+            <column caption='Transaction Fee' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Transaction_Fee]' role='measure' type='quantitative' />
+            <column-instance column='[Calculation_3687462945761308673]' derivation='Avg' name='[avg:Calculation_3687462945761308673:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='cell'>
+            <format attr='text-format' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[avg:Calculation_3687462945761308673:qk]' value='p0.00%' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[avg:Calculation_3687462945761308673:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[avg:Calculation_3687462945761308673:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{DF5E0F23-0A3A-4EFE-8D9D-ACDE7DF21627}' />
+    </worksheet>
+    <worksheet name='Avg Fee Per Transaction'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Transaction Fee' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Transaction_Fee]' role='measure' type='quantitative' />
+            <column-instance column='[Transaction_Fee]' derivation='Avg' name='[avg:Transaction_Fee:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[avg:Transaction_Fee:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[avg:Transaction_Fee:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{CEFC1FC5-F3A1-4860-8898-7363C72F3EC8}' />
+    </worksheet>
+    <worksheet name='Distribution of Transaction Values'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column aggregation='None' datatype='integer' name='[Total Value (bin)]' role='dimension' type='quantitative'>
+              <calculation class='bin' decimals='4' formula='[Total_Value]' peg='0' size='100000' />
+            </column>
+            <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+            <column-instance column='[Total_Value]' derivation='Count' name='[cnt:Total_Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total Value (bin)]' derivation='None' name='[none:Total Value (bin):qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Total_Value:qk]' scope='rows' value='Number of Transactions' />
+            <format attr='title' class='0' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Total Value (bin):qk]' scope='cols' value='Transaction Value' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Total_Value:qk]' value='' />
+            <format attr='text-format' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Total Value (bin):qk]' value='c&quot;$&quot;#,##0,,M;-&quot;$&quot;#,##0,,M' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <mark-sizing custom-mark-size-in-axis-units='1.0' mark-alignment='mark-alignment-left' mark-sizing-setting='marks-scaling-on' use-custom-mark-size='false' />
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-orientation' value='-90' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-color' value='#499894' />
+                <format attr='size' value='0' />
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Total_Value:qk]</rows>
+        <cols>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Total Value (bin):qk]</cols>
+        <show-full-range>
+          <column>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[Total Value (bin)]</column>
+        </show-full-range>
+      </table>
+      <simple-id uuid='{1C96C587-703D-4002-9167-D135916BDCAE}' />
+    </worksheet>
+    <worksheet name='Median Transaction Value'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+            <column-instance column='[Total_Value]' derivation='Median' name='[med:Total_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[med:Total_Value:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[med:Total_Value:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{095B95BA-540B-4516-A33B-B628756F9541}' />
+    </worksheet>
+    <worksheet name='Top 5 Crypto Assets'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column datatype='string' name='[Crypto]' role='dimension' type='nominal' />
+            <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+            <column-instance column='[Crypto]' derivation='None' name='[none:Crypto:nk]' pivot='key' type='nominal' />
+            <column-instance column='[Total_Value]' derivation='Sum' name='[sum:Total_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <filter class='categorical' column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]'>
+            <groupfilter count='5' end='top' function='end' units='records' user:ui-marker='end' user:ui-top-by-field='true'>
+              <groupfilter direction='DESC' expression='SUM([Total_Value])' function='order' user:ui-marker='order'>
+                <groupfilter function='level-members' level='[none:Crypto:nk]' user:ui-enumeration='all' user:ui-marker='enumerate' />
+              </groupfilter>
+            </groupfilter>
+          </filter>
+          <shelf-sorts>
+            <shelf-sort-v2 dimension-to-sort='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]' direction='DESC' is-on-innermost-dimension='true' measure-to-sort-by='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]' shelf='rows' />
+          </shelf-sorts>
+          <slices>
+            <column>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]' value='c&quot;$&quot;#,##0,,M;-&quot;$&quot;#,##0,,M' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]</rows>
+        <cols>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]</cols>
+      </table>
+      <simple-id uuid='{7153AA7E-AACA-4507-9326-7E358F5B18AF}' />
+    </worksheet>
+    <worksheet name='Total Fees Collected'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Transaction Fee' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Transaction_Fee]' role='measure' type='quantitative' />
+            <column-instance column='[Transaction_Fee]' derivation='Sum' name='[sum:Transaction_Fee:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Transaction_Fee:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Transaction_Fee:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{85E19217-2206-404C-B8F3-A67BB1CA3B84}' />
+    </worksheet>
+    <worksheet name='Total Transactions'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Transaction ID' datatype='integer' name='[Transaction_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Transaction_ID]' derivation='CountD' name='[ctd:Transaction_ID:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[ctd:Transaction_ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[ctd:Transaction_ID:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{6839D293-5567-4AF9-ACA4-973B99239320}' />
+    </worksheet>
+    <worksheet name='Total Volume'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+            <column-instance column='[Total_Value]' derivation='Sum' name='[sum:Total_Value:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{DB02284C-ED7C-4C79-81EC-85302B5FFB59}' />
+    </worksheet>
+    <worksheet name='Transaction Volume Over Time'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+            <datasource name='Parameters' />
+          </datasources>
+          <datasource-dependencies datasource='Parameters'>
+            <column alias='Week' caption='View' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;week&quot;'>
+              <calculation class='tableau' formula='&quot;week&quot;' />
+              <aliases>
+                <alias key='&quot;day&quot;' value='Day' />
+                <alias key='&quot;month&quot;' value='Month' />
+                <alias key='&quot;quarter&quot;' value='Quarter' />
+                <alias key='&quot;week&quot;' value='Week' />
+                <alias key='&quot;year&quot;' value='Year' />
+              </aliases>
+            </column>
+          </datasource-dependencies>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Date_view' datatype='date' name='[Calculation_29836402407907336]' role='dimension' type='quantitative'>
+              <calculation class='tableau' formula='DATE(DATETRUNC([Parameters].[Parameter 1], [Transaction_Date]))' />
+            </column>
+            <column caption='calculated_difference' datatype='real' name='[Calculation_3687462945692688384]' role='measure' type='quantitative'>
+              <calculation class='tableau' formula='((ZN(SUM([Total_Value])) - LOOKUP(ZN(SUM([Total_Value])), -1)))'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Total Value' datatype='real' default-format='c&quot;$&quot;#,##0;-&quot;$&quot;#,##0' name='[Total_Value]' role='measure' type='quantitative' />
+            <column caption='Color Calc' datatype='string' name='[Transaction Volume Color (copy)_2935643295674871809]' role='measure' type='nominal'>
+              <calculation class='tableau' formula='if [Calculation_3687462945692688384] &lt; 0 then &apos;Negative&apos; else &apos;Positive&apos; end'>
+                <table-calc ordering-type='Rows' />
+              </calculation>
+            </column>
+            <column caption='Transaction Date' datatype='datetime' name='[Transaction_Date]' role='dimension' type='ordinal' />
+            <column-instance column='[Calculation_29836402407907336]' derivation='None' name='[none:Calculation_29836402407907336:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Transaction_Date]' derivation='None' name='[none:Transaction_Date:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Total_Value]' derivation='Sum' name='[sum:Total_Value:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Transaction Volume Color (copy)_2935643295674871809]' derivation='User' name='[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' pivot='key' type='nominal'>
+              <table-calc ordering-type='Rows' />
+              <table-calc field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[Calculation_3687462945692688384]' ordering-type='Rows' />
+            </column-instance>
+          </datasource-dependencies>
+          <filter class='relative-date' column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_Date:qk]' first-period='-3' include-future='true' include-null='false' last-period='0' period-type-v2='year' />
+          <slices>
+            <column>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_Date:qk]</column>
+          </slices>
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Calculation_29836402407907336:qk]' scope='cols' value='Transaction Date' />
+          </style-rule>
+          <style-rule element='label'>
+            <format attr='text-format' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]' value='c&quot;$&quot;#,##0,,M;-&quot;$&quot;#,##0,,M' />
+          </style-rule>
+          <style-rule element='legend-title-text'>
+            <format attr='color' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' value='Trend'>
+              <formatted-text>
+                <run>Trend</run>
+              </formatted-text>
+            </format>
+          </style-rule>
+        </style>
+        <panes>
+          <pane id='2' selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-markers-mode' value='all' />
+                <format attr='mark-transparency' value='203' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[sum:Total_Value:qk]</rows>
+        <cols>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Calculation_29836402407907336:qk]</cols>
+      </table>
+      <simple-id uuid='{BC882900-82BF-4E04-8E71-789A5E37CCCD}' />
+    </worksheet>
+    <worksheet name='Transaction by Platform'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column datatype='string' name='[Platform]' role='dimension' type='nominal' />
+            <column caption='Transaction ID' datatype='integer' name='[Transaction_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[Transaction_ID]' derivation='Count' name='[cnt:Transaction_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Platform]' derivation='None' name='[none:Platform:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]' direction='DESC' using='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Transaction_ID:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Transaction_ID:qk]' scope='cols' value='Transaction by Platform' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]</rows>
+        <cols>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Transaction_ID:qk]</cols>
+      </table>
+      <simple-id uuid='{86293629-35F1-4BB7-A302-0B36909881C9}' />
+    </worksheet>
+    <worksheet name='Transactions by Wallet Type'>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='Transaction ID' datatype='integer' name='[Transaction_ID]' role='dimension' type='ordinal' />
+            <column caption='Wallet Type' datatype='string' name='[Wallet_Type]' role='dimension' type='nominal' />
+            <column-instance column='[Transaction_ID]' derivation='Count' name='[cnt:Transaction_ID:qk]' pivot='key' type='quantitative' />
+            <column-instance column='[Wallet_Type]' derivation='None' name='[none:Wallet_Type:nk]' pivot='key' type='nominal' />
+          </datasource-dependencies>
+          <computed-sort column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]' direction='DESC' using='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Transaction_ID:qk]' />
+          <aggregation value='true' />
+        </view>
+        <style>
+          <style-rule element='axis'>
+            <format attr='title' class='0' field='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Transaction_ID:qk]' scope='cols' value='Number of Transactions' />
+          </style-rule>
+        </style>
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <color column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]' />
+            </encodings>
+            <style>
+              <style-rule element='mark'>
+                <format attr='mark-labels-cull' value='true' />
+                <format attr='mark-labels-show' value='false' />
+                <format attr='mark-transparency' value='206' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]</rows>
+        <cols>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[cnt:Transaction_ID:qk]</cols>
+      </table>
+      <simple-id uuid='{8A588C4C-61E7-4FDA-9FC0-40425A90FDC9}' />
+    </worksheet>
+    <worksheet name='Unique Crypto Assets'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column datatype='string' name='[Crypto]' role='dimension' type='nominal' />
+            <column-instance column='[Crypto]' derivation='CountD' name='[ctd:Crypto:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[ctd:Crypto:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[ctd:Crypto:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{AB8902C3-5985-4609-9080-6A6126E4720B}' />
+    </worksheet>
+    <worksheet name='Unique Users'>
+      <layout-options>
+        <title>
+          <formatted-text>
+            <run bold='true' fontalignment='1' fontcolor='#666666'>&lt;Sheet Name&gt;</run>
+          </formatted-text>
+        </title>
+      </layout-options>
+      <table>
+        <view>
+          <datasources>
+            <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+          </datasources>
+          <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+            <column caption='User ID' datatype='integer' name='[User_ID]' role='dimension' type='ordinal' />
+            <column-instance column='[User_ID]' derivation='CountD' name='[ctd:User_ID:qk]' pivot='key' type='quantitative' />
+          </datasource-dependencies>
+          <aggregation value='true' />
+        </view>
+        <style />
+        <panes>
+          <pane selection-relaxation-option='selection-relaxation-allow'>
+            <view>
+              <breakdown value='auto' />
+            </view>
+            <mark class='Automatic' />
+            <encodings>
+              <text column='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[ctd:User_ID:qk]' />
+            </encodings>
+            <customized-label>
+              <formatted-text>
+                <run fontsize='18'>&lt;</run>
+                <run fontsize='18'>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[ctd:User_ID:qk]</run>
+                <run fontsize='18'>&gt;</run>
+              </formatted-text>
+            </customized-label>
+            <style>
+              <style-rule element='cell'>
+                <format attr='text-align' value='center' />
+                <format attr='vertical-align' value='center' />
+              </style-rule>
+              <style-rule element='mark'>
+                <format attr='mark-labels-show' value='true' />
+                <format attr='mark-labels-cull' value='true' />
+              </style-rule>
+            </style>
+          </pane>
+        </panes>
+        <rows />
+        <cols />
+      </table>
+      <simple-id uuid='{19BE8B44-4622-4462-A942-F5E1E3CEFF51}' />
+    </worksheet>
+  </worksheets>
+  <dashboards>
+    <dashboard enable-sort-zone-taborder='true' name='Dashboard 1'>
+      <style />
+      <size sizing-mode='automatic' />
+      <datasources>
+        <datasource name='Parameters' />
+        <datasource caption='cleaned_crypto_transactions' name='federated.1acddnc0rn3kec146hg9x0wwl7pp' />
+      </datasources>
+      <datasource-dependencies datasource='Parameters'>
+        <column alias='Week' caption='View' datatype='string' name='[Parameter 1]' param-domain-type='list' role='measure' type='nominal' value='&quot;week&quot;'>
+          <calculation class='tableau' formula='&quot;week&quot;' />
+          <aliases>
+            <alias key='&quot;day&quot;' value='Day' />
+            <alias key='&quot;month&quot;' value='Month' />
+            <alias key='&quot;quarter&quot;' value='Quarter' />
+            <alias key='&quot;week&quot;' value='Week' />
+            <alias key='&quot;year&quot;' value='Year' />
+          </aliases>
+          <members>
+            <member alias='Year' value='&quot;year&quot;' />
+            <member alias='Quarter' value='&quot;quarter&quot;' />
+            <member alias='Month' value='&quot;month&quot;' />
+            <member alias='Week' value='&quot;week&quot;' />
+            <member alias='Day' value='&quot;day&quot;' />
+          </members>
+        </column>
+      </datasource-dependencies>
+      <datasource-dependencies datasource='federated.1acddnc0rn3kec146hg9x0wwl7pp'>
+        <column caption='Transaction Date' datatype='datetime' name='[Transaction_Date]' role='dimension' type='ordinal' />
+        <column-instance column='[Transaction_Date]' derivation='None' name='[none:Transaction_Date:qk]' pivot='key' type='quantitative' />
+      </datasource-dependencies>
+      <zones>
+        <zone h='100000' id='4' type-v2='layout-basic' w='100000' x='0' y='0'>
+          <zone h='95368' id='5' type-v2='layout-basic' w='99258' x='371' y='4014'>
+            <zone h='75186' id='26' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='48751' x='371' y='24196'>
+              <zone h='25096' id='11' name='Top 5 Crypto Assets' w='48771' x='371' y='24170'>
+                <layout-cache type-h='cell' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#b4b4b4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25097' id='24' name='Transaction by Platform' w='48771' x='371' y='49266'>
+                <layout-cache type-h='cell' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#b4b4b4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25019' id='22' name='Transactions by Wallet Type' w='48771' x='371' y='74363'>
+                <zone-style>
+                  <format attr='border-color' value='#b4b4b4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='20182' id='31' layout-strategy-id='distribute-evenly' param='horz' type-v2='layout-flow' w='99258' x='371' y='4014'>
+              <zone h='20155' id='28' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='24826' x='371' y='4015'>
+                <zone h='10116' id='14' name='Total Transactions' w='24826' x='371' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='10039' id='18' name='Median Transaction Value' w='24826' x='371' y='14131'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='20155' id='29' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='24826' x='25197' y='4015'>
+                <zone h='10116' id='15' name='Total Volume' w='24826' x='25197' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='10039' id='21' name='Average Fee %' w='24826' x='25197' y='14131'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='20155' id='32' param='vert' type-v2='layout-flow' w='24826' x='50023' y='4015'>
+                <zone h='10077' id='17' name='Unique Users' w='24826' x='50023' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='10077' id='16' name='Unique Crypto Assets' w='24826' x='50023' y='14092'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone h='20155' id='30' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='24780' x='74849' y='4015'>
+                <zone h='10116' id='19' name='Total Fees Collected' w='24780' x='74849' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+                <zone h='10039' id='20' name='Avg Fee Per Transaction' w='24780' x='74849' y='14131'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                  </zone-style>
+                </zone>
+              </zone>
+            </zone>
+            <zone h='75186' id='33' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='5048' x='49122' y='24196'>
+              <zone h='25096' id='12' name='Top 5 Crypto Assets' pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]' type-v2='color' w='5011' x='49142' y='24170'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25097' id='25' name='Transaction by Platform' pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]' type-v2='color' w='5011' x='49142' y='49266'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='25019' id='23' name='Transactions by Wallet Type' pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]' type-v2='color' w='5011' x='49142' y='74363'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone fixed-size='160' h='75186' id='6' is-fixed='true' param='vert' type-v2='layout-flow' w='7055' x='92574' y='24196'>
+              <zone h='4016' id='8' name='Transaction Volume Over Time' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='7055' x='92574' y='24196'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='4016' id='10' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='7055' x='92574' y='28212'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='5097' id='9' name='Transaction Volume Over Time' pane-specification-id='2' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' type-v2='color' w='7055' x='92574' y='32228'>
+                <zone-style>
+                  <format attr='border-color' value='#000000' />
+                  <format attr='border-style' value='none' />
+                  <format attr='border-width' value='0' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+            <zone h='75186' id='27' layout-strategy-id='distribute-evenly' param='vert' type-v2='layout-flow' w='38404' x='54170' y='24196'>
+              <zone h='37606' id='3' name='Transaction Volume Over Time' w='38422' x='54153' y='24170'>
+                <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#b4b4b4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+              <zone h='37606' id='13' name='Distribution of Transaction Values' w='38422' x='54153' y='61776'>
+                <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                <zone-style>
+                  <format attr='border-color' value='#b4b4b4' />
+                  <format attr='border-style' value='solid' />
+                  <format attr='border-width' value='1' />
+                  <format attr='margin' value='4' />
+                </zone-style>
+              </zone>
+            </zone>
+          </zone>
+          <zone forceUpdate='true' h='3396' id='34' type-v2='text' w='99258' x='371' y='618'>
+            <formatted-text>
+              <run bold='true' fontalignment='1' fontsize='20' lmargin='225'>Crypto Transactions &amp; Fees at a Glance </run>
+            </formatted-text>
+            <zone-style>
+              <format attr='border-color' value='#000000' />
+              <format attr='border-style' value='none' />
+              <format attr='border-width' value='0' />
+              <format attr='margin' value='4' />
+            </zone-style>
+          </zone>
+          <zone-style>
+            <format attr='border-color' value='#000000' />
+            <format attr='border-style' value='none' />
+            <format attr='border-width' value='0' />
+            <format attr='margin' value='8' />
+            <format attr='background-color' value='#f5f5f5' />
+          </zone-style>
+        </zone>
+      </zones>
+      <devicelayouts>
+        <devicelayout auto-generated='true' name='Phone'>
+          <size maxheight='2300' minheight='2300' sizing-mode='vscroll' />
+          <zones>
+            <zone h='100000' id='36' type-v2='layout-basic' w='100000' x='0' y='0'>
+              <zone h='98764' id='35' param='vert' type-v2='layout-flow' w='99258' x='371' y='618'>
+                <zone forceUpdate='true' h='3396' id='34' type-v2='text' w='99258' x='371' y='618'>
+                  <formatted-text>
+                    <run bold='true' fontalignment='1' fontsize='20' lmargin='225'>Crypto Transactions &amp; Fees at a Glance </run>
+                  </formatted-text>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='71' h='10116' id='14' is-fixed='true' name='Total Transactions' w='24826' x='371' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='71' h='10116' id='15' is-fixed='true' name='Total Volume' w='24826' x='25197' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='71' h='10077' id='17' is-fixed='true' name='Unique Users' w='24826' x='50023' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='71' h='10116' id='19' is-fixed='true' name='Total Fees Collected' w='24780' x='74849' y='4015'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='10077' id='16' is-fixed='true' name='Unique Crypto Assets' w='24826' x='50023' y='14092'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='10039' id='18' is-fixed='true' name='Median Transaction Value' w='24826' x='371' y='14131'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='10039' id='21' is-fixed='true' name='Average Fee %' w='24826' x='25197' y='14131'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='70' h='10039' id='20' is-fixed='true' name='Avg Fee Per Transaction' w='24780' x='74849' y='14131'>
+                  <layout-cache cell-count-h='1' non-cell-size-h='43' type-h='cell' type-w='cell' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='191' h='25096' id='11' is-fixed='true' name='Top 5 Crypto Assets' w='48771' x='371' y='24170'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25096' id='12' name='Top 5 Crypto Assets' pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]' type-v2='color' w='5011' x='49142' y='24170'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4016' id='8' name='Transaction Volume Over Time' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_Date:qk]' show-domain='false' show-null-ctrls='false' type-v2='filter' w='7055' x='92574' y='24196'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37606' id='3' is-fixed='true' name='Transaction Volume Over Time' w='38422' x='54153' y='24170'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='5097' id='9' name='Transaction Volume Over Time' pane-specification-id='2' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' type-v2='color' w='7055' x='92574' y='32228'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='4016' id='10' mode='compact' param='[Parameters].[Parameter 1]' type-v2='paramctrl' w='7055' x='92574' y='28212'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='191' h='25097' id='24' is-fixed='true' name='Transaction by Platform' w='48771' x='371' y='49266'>
+                  <layout-cache type-h='cell' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25097' id='25' name='Transaction by Platform' pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]' type-v2='color' w='5011' x='49142' y='49266'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='280' h='37606' id='13' is-fixed='true' name='Distribution of Transaction Values' w='38422' x='54153' y='61776'>
+                  <layout-cache minheight='198' type-h='scalable' type-w='fixed' />
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone fixed-size='190' h='25019' id='22' is-fixed='true' name='Transactions by Wallet Type' w='48771' x='371' y='74363'>
+                  <zone-style>
+                    <format attr='border-color' value='#b4b4b4' />
+                    <format attr='border-style' value='solid' />
+                    <format attr='border-width' value='1' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+                <zone h='25019' id='23' name='Transactions by Wallet Type' pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]' type-v2='color' w='5011' x='49142' y='74363'>
+                  <zone-style>
+                    <format attr='border-color' value='#000000' />
+                    <format attr='border-style' value='none' />
+                    <format attr='border-width' value='0' />
+                    <format attr='margin' value='4' />
+                    <format attr='padding' value='0' />
+                  </zone-style>
+                </zone>
+              </zone>
+              <zone-style>
+                <format attr='border-color' value='#000000' />
+                <format attr='border-style' value='none' />
+                <format attr='border-width' value='0' />
+                <format attr='margin' value='8' />
+                <format attr='background-color' value='#f5f5f5' />
+              </zone-style>
+            </zone>
+          </zones>
+        </devicelayout>
+      </devicelayouts>
+      <simple-id uuid='{D6D20560-C832-457F-A0CF-738E736BAC94}' />
+    </dashboard>
+  </dashboards>
+  <windows source-height='30'>
+    <window class='dashboard' maximized='true' name='Dashboard 1'>
+      <viewpoints>
+        <viewpoint name='Average Fee %'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Avg Fee Per Transaction'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Distribution of Transaction Values'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Median Transaction Value'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Top 5 Crypto Assets'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Total Fees Collected'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Transactions'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Total Volume'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Transaction Volume Over Time'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Transaction by Platform'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Transactions by Wallet Type'>
+          <zoom type='entire-view' />
+          <highlight>
+            <color-one-way>
+              <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]</field>
+            </color-one-way>
+          </highlight>
+        </viewpoint>
+        <viewpoint name='Unique Crypto Assets'>
+          <zoom type='entire-view' />
+        </viewpoint>
+        <viewpoint name='Unique Users'>
+          <zoom type='entire-view' />
+        </viewpoint>
+      </viewpoints>
+      <active id='6' />
+      <simple-id uuid='{E942AD9E-5158-491D-A23E-AFB99B90C6FE}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Average Fee %'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{AAFA5EB1-10E1-4596-9DFF-E38E74EF8EB6}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Avg Fee Per Transaction'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4031ACD9-F8D5-4ED8-A605-CAC5480BD456}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Distribution of Transaction Values'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{4AF8839E-2A24-4E1D-93BC-71AA02BD7089}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Median Transaction Value'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{04707E78-2024-4CC1-861C-50B06675194A}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Top 5 Crypto Assets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]</field>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[usr:Transaction Volume Color (copy)_2935643295674871809:nk:2]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{BAD6ABC7-6DBC-4ECC-952E-87F4C6267AAA}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Fees Collected'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{F5202AB1-C21B-4C70-A7D4-E23665CDA7E6}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Transactions'>
+      <cards>
+        <edge name='left'>
+          <strip size='231'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_ID:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{445C8D00-17B9-48CE-A556-E6E90C152381}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Total Volume'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <simple-id uuid='{79147212-469B-4D96-90B0-CD0833A90978}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Transaction Volume Over Time'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_Date:qk]' show-domain='false' show-null-ctrls='false' type='filter' />
+            <card pane-specification-id='2' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[usr:Transaction Volume Color (copy)_2935643295674871809:nk]' type='color' />
+            <card mode='compact' param='[Parameters].[Parameter 1]' type='parameter' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[tyr:Calculation_29836402407907336:qk]</field>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[yr:Transaction_Date:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{946ECB92-C3CB-4AEA-8EC4-35C0F407D07F}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Transaction by Platform'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Platform:nk]</field>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_ID:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{DA366709-76AE-49C7-9598-15C01C1CE63F}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Transactions by Wallet Type'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+        <edge name='right'>
+          <strip size='160'>
+            <card pane-specification-id='0' param='[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]' type='color' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Transaction_ID:ok]</field>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Wallet_Type:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{10D03BAB-9D88-46B8-8681-AB48B43CA52D}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Unique Crypto Assets'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:Crypto:nk]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{E867F314-4F9A-4DF7-A35C-21B35CA1BB88}' />
+    </window>
+    <window class='worksheet' hidden='true' name='Unique Users'>
+      <cards>
+        <edge name='left'>
+          <strip size='160'>
+            <card type='pages' />
+            <card type='filters' />
+            <card type='marks' />
+          </strip>
+        </edge>
+        <edge name='top'>
+          <strip size='2147483647'>
+            <card type='columns' />
+          </strip>
+          <strip size='2147483647'>
+            <card type='rows' />
+          </strip>
+          <strip size='31'>
+            <card type='title' />
+          </strip>
+        </edge>
+      </cards>
+      <viewpoint>
+        <highlight>
+          <color-one-way>
+            <field>[federated.1acddnc0rn3kec146hg9x0wwl7pp].[none:User_ID:ok]</field>
+          </color-one-way>
+        </highlight>
+      </viewpoint>
+      <simple-id uuid='{4EB5D4DA-BE80-4950-BCD7-C2BB87171C4F}' />
+    </window>
+  </windows>
+  <thumbnails>
+    <thumbnail height='384' name='Dashboard 1' width='384'>
+      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
+      faFl9PT0MDU1dUmxlyqXzs5OZmZmLnpZbW1tvPvuu4ueniRJknQlnHUU0LFjx9ixYwdCCNrb
+      26mursZoNPLrX/96wRzd8XbixAmsVitlZWUA+P1+XnjhBV577bVLXuann35KdXU1N91000V9
+      73vf+x4ZGRn6gyqeffZZqqqq+Pjjj7n99ttxuVxLfi8SiVBbW8u9996rv9bd3c327dv55je/
+      Kec8lyQpLs56pKmpqeGRRx5BVVV++MMf8uqrrwIsaO2GQiHMZjMGg4FQKITP5yMjIwNFUfTP
+      RCIRPB4Pubm5pKSk6AfL6elpXC6XfrCL3Xxms9mwWq0YDAb99dnZWRwOB0ajkePHj+N2uykt
+      LQVODVeNrRtAOBxmeHiY/Px8zGazvgw4NcGd3+8nNzdXX/58IyMjpKWlYbPZ9Nfmr8f8/8di
+      v/LKKyiKQk9PD6+++iq///3vFywztv6KopCamqqv48cff8w999yjf+7kyZPcfffdbNq0Sf/e
+      6OgoKSkpuN1uDAbDgrOMYDCI1WoFQNM0RkZGyMzMxGKx4PF4sNvtpKamLrmdkiRJcAlPBBse
+      HubNN99EURTa29t55ZVX2LlzJ01NTbhcLnp6enjllVeYmZlhy5YtFBYWkpOTQ09PD6+//joD
+      AwP8/Oc/p7KykoGBAbZs2UJ6ejovvPACRUVFDA4Oct999/Hwww8zNjbGiy++SE5ODpOTkzz4
+      4IP861//wmw285///IdvfOMbrFq1ihdffJHf/OY39PX1sXXrVlasWEFbWxtPP/0069ev569/
+      /Su1tbXk5OQQCoVYvnw53//+9xds144dO1i1ahWtra18+9vf5tZbb+Xpp59mx44d2Gw2BgcH
+      2bFjBy+99NKS5VJYWEg4HF7wWiQS4ac//SkOh4O5uTmWLVvGU089xcsvv0xzczPPP/88RUVF
+      3Hbbbbz99ttomkZdXR1PPvkk7777rt4tlZ6ezpYtW6ivr6elpYXOzk7C4TDbtm3jxz/+MUaj
+      kcLCQpqbmykoKMDtdvP555+zbds2iouLL/YnliQpWYh5NE0TPp9PeL1e0d7eLoQQIhqNimee
+      eUb/zODgoPjKV74i3n///QXfi/15++23xe7du0VfX5/YunWr/pnnnntOeL1e8f7774u//OUv
+      +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
+      YII=
+    </thumbnail>
+  </thumbnails>
+</workbook>
