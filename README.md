@@ -13,6 +13,7 @@ Analyzed transaction trends, top assets, user activity, and platform fee structu
 - `Dashboard.twb` – Tableau workbook  
 - `requirements.txt` – Python environment dependencies  
 - `README.md` – Project documentation
+-  `index.html` - Copy of a Data Profiling report for GitHub Pages
 
 ---
 
